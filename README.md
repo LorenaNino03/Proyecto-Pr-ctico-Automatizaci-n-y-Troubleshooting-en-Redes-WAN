@@ -24,6 +24,7 @@
 8. [Guía de Uso — Paso a Paso](#-guía-de-uso--paso-a-paso)
 9. [Prueba con OSPF en Cisco Packet Tracer](#-prueba-con-ospf-en-cisco-packet-tracer-router-2811)
 10. [Integrantes](#-integrantes)
+11. Prom
 
 ---
 
@@ -312,6 +313,38 @@ Neighbor ID     Pri   State           Dead Time   Address         Interface
 
 > 📸 Las capturas de pantalla de la simulación en Packet Tracer se encuentran en el archivo `Explicacion_y_pantallazos.docx` adjunto al proyecto.
 
+# PROMPT
+Contexto del Proyecto: Actúa como un Ingeniero de DevOps y Telecomunicaciones experto en desarrollo de software con Python. Debes construir una aplicación web corporativa/académica utilizando Streamlit orientada a la simulación y generación dinámica de scripts de configuración de red para estudiantes de la UCompensar. El diseño visual de la interfaz debe ser moderno y limpio, utilizando estilos avanzados de CSS embebido con una estética de modo oscuro (Glassmorphism y tonos azulados/púrpuras).
+
+Requerimientos de Arquitectura de Red y Lógica de Datos:
+
+Cálculo de Direccionamiento Automático: Utiliza la librería integrada ipaddress de Python para que, a partir de una dirección IP de Gateway (por defecto 172.16.10.1) y una máscara en formato CIDR seleccionadas por el usuario, el sistema calcule matemáticamente la dirección de red base y su respectiva máscara tradicional en formato decimal, así como su wildcard.
+
+Parámetros Globales e Inputs Dinámicos: El panel lateral (st.sidebar) debe capturar las variables clave de la infraestructura: Dirección IP, Selector de Máscara CIDR (rango 24 a 30), ID de la VLAN (numérico), Nombre de la VLAN (texto) y un Deslizador (st.slider) interactivo para definir la cantidad de equipos en la topología física en un rango de 1 a 10 equipos.
+
+Catálogo de Referencias de Hardware: Añade un menú desplegable (st.selectbox) que ofrezca al usuario una lista de modelos y referencias reales del mercado de telecomunicaciones. Esta lista debe cambiar de manera dinámica dependiendo del Vendor tecnológico seleccionado por el usuario en la interfaz:
+
+Si el Vendor es CISCO: Mostrar modelos como ISR 4331, Catalyst 9300, ASR 1001-X, Nexus 9300.
+
+Si el Vendor es HUAWEI: Mostrar modelos como NetEngine AR6140, CloudEngine S5735-L, NetEngine 8000 M1A, CloudEngine S6730-H.
+
+Estructura de la Interfaz Central (Pestañas de Protocolos): El cuerpo principal de la página debe llevar el título institucional destacado: "CONFIGURACION DE PROTOCOLOS BGP,ISIS O OSPF UCOMPENSAR". Debe dividirse obligatoriamente en tres pestañas independientes (st.tabs) para los protocolos principales de enrutamiento:
+
+Pestaña OSPF (Link-State): Debe mostrar una tarjeta teórica explicativa del protocolo y una caja de terminal oscura con comandos reales de sintaxis IOS para Cisco o VRP para Huawei (dependiendo del radio button activo), inyectando dinámicamente las variables calculadas (VLAN, IP, Máscara, Wildcard, etc.).
+
+Pestaña BGP (Path-Vector): Debe simular la configuración de vecindades BGP calculando lógicamente una IP adyacente para el comando neighbor o peer.
+
+Pestaña IS-IS (ISO CLNS): Debe incluir una característica exclusiva: un selector de radio (st.radio) que permita elegir la naturaleza de los "Sistemas Intermedios", alternando entre Routers de Núcleo (Core) o Switches Multicapa (Capa 3).
+
+Requerimiento Gráfico Avanzado (Topología Dinámica en SVG): Al final de la página, embebe un componente HTML que renderice un mapa de topología física autogenerado en formato SVG que responda en tiempo real a las interacciones del usuario:
+
+Debe graficar exactamente la cantidad de nodos configurados en el slider (hasta 10).
+
+Los enlaces deben simular cables de fibra óptica con un haz láser animado que fluye continuamente a lo largo de la red (stroke-dashoffset).
+
+Lógica de color adaptativa: El color de los cables láser y los bordes de los equipos debe cambiar dinámicamente según la pestaña del protocolo que se esté visualizando: Celeste (#38bdf8) para OSPF, Amarillo/Ámbar (#fbbf24) para BGP y Púrpura (#a855f7) para IS-IS.
+
+Lógica de figuras adaptativa: Si en la pestaña IS-IS el usuario selecciona "Switches Multicapa", los círculos clásicos de los routers deben transformarse en cajas cuadradas con el icono trad
 ---
 
 ## 👥 Integrantes
