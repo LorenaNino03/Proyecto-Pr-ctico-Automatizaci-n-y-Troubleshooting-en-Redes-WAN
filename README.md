@@ -1,4 +1,4 @@
-# Proyecto-Pr-ctico-Automatizaci-n-y-Troubleshooting-en-Redes-WAN
+# Proyecto-Practico-Automatizacion-y-Troubleshooting-en-Redes-WAN
 
 # TRABAJO-FINAL-DE-REDES-WAN
 # 🌐 APLICATIVO REDES WAN — UCompensar
@@ -260,9 +260,8 @@ Como caso de prueba, se realizó la configuración del protocolo **OSPF** en un 
 
 | Parámetro | Valor |
 |-----------|-------|
-| Dirección IP Gateway | `172.16.10.1` |
+| Dirección IP Gateway | `10.10.120.1` |
 | Máscara CIDR | `/24` |
-| Dirección de Red | `172.16.10.0` |
 | Wildcard | `0.0.0.255` |
 | VLAN ID | `100` |
 | Nombre VLAN | `VLAN_PRODUCCION` |
@@ -273,24 +272,15 @@ Como caso de prueba, se realizó la configuración del protocolo **OSPF** en un 
 
 <img width="514" height="323" alt="image" src="https://github.com/user-attachments/assets/c75ab6e8-5599-45a1-aa75-ce2ae1b0cfd0" />
 
-```ios
-! === CONFIGURACIÓN OSPF EN CISCO IOS ===
-! Modelo de Equipo: ISR 4331 (Router de Servicios Integrados Empresarial)
-vlan 100
- name VLAN_PRODUCCION
-!
-interface GigabitEthernet0/1
- description Enlace_Trunk_Hacia_LAN
- no shutdown
-!
-interface GigabitEthernet0/1.100
- description Subinterfaz Gateway VLAN VLAN_PRODUCCION
- encapsulation dot1Q 100
- ip address 172.16.10.1 255.255.255.0
-!
-router ospf 1
- router-id 1.1.1.1
- network 172.16.10.0 0.0.0.255 area 0
+Configuración realizada en cisco packet tracer:
+
+<img width="384" height="130" alt="image" src="https://github.com/user-attachments/assets/22c2ea7c-e63b-482b-b7fb-1c650742000b" />
+
+<img width="519" height="238" alt="image" src="https://github.com/user-attachments/assets/df3cc1ec-3561-410f-9ed4-452acb9add8b" />
+
+<img width="519" height="238" alt="image" src="https://github.com/user-attachments/assets/09aa36d8-1b37-4324-a1c6-e2e91f3de446" />
+
+
 ```
 
 ### Comandos de verificación OSPF
