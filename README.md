@@ -198,7 +198,7 @@ En el **panel lateral izquierdo**:
 3. Define el ID de VLAN (ej. `100`) y el nombre de la VLAN (ej. `VLAN_PRODUCCION`).
 4. Mueve el slider para definir cuántos equipos tendrá tu topología (1 a 10).
 
-5. <img width="207" height="537" alt="image" src="https://github.com/user-attachments/assets/8ce76b25-7d54-4fb2-8163-185481af1772" />
+<img width="207" height="537" alt="image" src="https://github.com/user-attachments/assets/8ce76b25-7d54-4fb2-8163-185481af1772" />
 
 > El sistema calculará automáticamente la dirección de red, la máscara tradicional y el wildcard.
 
@@ -207,12 +207,14 @@ En el cuerpo principal, elige el sistema operativo del equipo:
 - **CISCO (IOS / IOS-XE)**
 - **HUAWEI (VRP)**
 
-- <img width="517" height="217" alt="image" src="https://github.com/user-attachments/assets/37ec67db-1882-45c4-a4bf-2687d7b0e283" />
+<img width="517" height="217" alt="image" src="https://github.com/user-attachments/assets/37ec67db-1882-45c4-a4bf-2687d7b0e283" />
 
 Ejemplo si escogemos Cisco:
+
 <img width="510" height="301" alt="image" src="https://github.com/user-attachments/assets/051a1172-6ee6-4948-a112-fec6a5d518e1" />
 
-Ejemplo si escogemos Huawei
+Ejemplo si escogemos Huawei:
+
 <img width="518" height="288" alt="image" src="https://github.com/user-attachments/assets/54bb7a95-bd00-440a-8889-71d122c848db" />
 
 El catálogo de modelos de hardware se actualizará dinámicamente.
@@ -221,16 +223,16 @@ El catálogo de modelos de hardware se actualizará dinámicamente.
 Haz clic en cada pestaña para ver la configuración del protocolo correspondiente:
 
 - **📡 OSPF** → Copia el script generado en la interfaz CLI de tu router Cisco o Huawei en Packet Tracer.
-- 
+
 <img width="512" height="153" alt="image" src="https://github.com/user-attachments/assets/5f679355-5821-4cca-be83-b2aa4ef7fa2a" />
 
 - **🌐 BGP** → Revisa la IP del vecino generada automáticamente y aplica la configuración.
-- 
-- <img width="516" height="126" alt="image" src="https://github.com/user-attachments/assets/898af7ca-71a2-4871-9833-ede344ad65fe" />
+
+<img width="516" height="126" alt="image" src="https://github.com/user-attachments/assets/898af7ca-71a2-4871-9833-ede344ad65fe" />
 
 - **🌌 IS-IS** → Selecciona si los equipos son Routers de Núcleo o Switches Multicapa; el script y la topología se adaptan en tiempo real.
-- 
-- <img width="514" height="190" alt="image" src="https://github.com/user-attachments/assets/4a7ba92c-c7b1-4977-bb8c-cd83d262db4f" />
+
+<img width="514" height="190" alt="image" src="https://github.com/user-attachments/assets/4a7ba92c-c7b1-4977-bb8c-cd83d262db4f" />
 
 
 ### Paso 4 — Observar la topología SVG
@@ -242,7 +244,7 @@ Al desplazarte hacia abajo verás el mapa de topología física con:
 - Animación de flujo de datos (fibra óptica láser).
 - Colores que indican el protocolo activo.
 
-- <img width="515" height="112" alt="image" src="https://github.com/user-attachments/assets/080252f1-864e-4f19-be15-d4fcc5131abf" />
+<img width="515" height="112" alt="image" src="https://github.com/user-attachments/assets/080252f1-864e-4f19-be15-d4fcc5131abf" />
 
 
 ### Paso 5 — Aplicar en Packet Tracer
